@@ -1,0 +1,314 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+body{
+  background: linear-gradient(#111 , #222);
+  /* background-image: -webkit-linear-gradient(to right #24243E , #302b63 , #0f0c29);
+    background-image: -webkit-linear-gradient(to right #24243E , #302b63 , #0f0c29); */
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* دا الشكل الاحمر اللي علي اليمين */
+body::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.904);
+  position: absolute;
+  clip-path: circle(40% at right 70%);
+  z-index: -1;
+}
+/* دا الكونتينر ال شايل كل حاجه */
+.container{
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* دا تخصيص الناف بشكل عام */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+}
+/* دا تخصيص اللوجو اللي علي الشمال */
+nav .logo{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+/* دي تخصيف الناف بار */
+nav ul li{
+  display: inline-block;
+  margin: 0 6px;
+}
+/* دي الناف بار اللي علي اليمين*/
+nav ul li a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+/* دي تاثير لما اروح علي الكلام */
+nav ul li a:hover{
+  color: #e80202;
+}
+/* دا المحتوي ال جوا الكلام والصوره */
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  position: relative;/* هتتشال*/
+
+}
+/* تنسيق الكتابه كلها ال جوا الكونتنت*/
+div .text{
+  color: #fff;
+  width: 40%;
+
+}
+/* تنسيق الاتس 2 ال جوا الكونتنت */
+div .text h2{
+  font-size: 40px;
+  /* text-transform: uppercase; */
+  /* font-weight: 700; */
+  /* letter-spacing: 20px; */  /* التنسيقات دي هتتحط لو هنعمل موقع حقيقي */
+}
+div .text p{
+  /* font-size: 18px; */
+  font-size: 25px;/* دي هتتشال ونحط ال فوق*/
+  line-height: 25px;
+  margin: 10px 0;
+  /* letter-spacing: 1px; */
+}
+
+.content .image{
+  width: 40%;
+}
+.made{
+  position: absolute;
+  bottom: 3%;
+  color: rgba(255, 255, 255, 0.526);
+}
+
+.image-1{
+  width: 350px;
+  position: absolute; /* دول هيتشالو لو هعمل مشروع حقيقي */
+  bottom: 15%;
+  left: 68%;
+  border-radius: 100px;
+  animation: slideme 16s ease-in ;
+  z-index: 8;
+}
+.image-2{
+  width: 350px;
+  position: absolute; /* دول هيتشالو لو هعمل مشروع حقيقي */
+  bottom: 15%;
+  left: 68%;
+  border-radius: 100px;
+  animation: slideme-2 10s ease-in ;
+  z-index: 10;
+}
+
+.image-3{
+  width: 350px;
+  position: absolute; /* دول هيتشالو لو هعمل مشروع حقيقي */
+  bottom: 15%;
+  left: 68%;
+  border-radius: 100px;
+  animation: slideme-3 8s ease-in ;
+  z-index: 9;
+}
+.image-4{
+  width: 350px;
+  position: absolute; /* دول هيتشالو لو هعمل مشروع حقيقي */
+  bottom: 15%;
+  left: 68%;
+  border-radius: 100px;
+  animation: slideme-4 3s ease-in ;
+  z-index: 7;
+}
+@keyframes slideme-4{
+  0%{
+    transform: skewX(30deg) translate(-500px);
+    opacity: 0;
+  }
+  60%{
+    transform: translateX(0px);
+  }
+  62%{
+    transform: skewX(0deg) translateX(30px);
+  }
+  70%{
+    transform: skew(-5deg);
+    opacity: 1;
+  }
+  80%{
+    transform: skew(0deg) translate(0);
+    opacity: 1;
+  }
+  90%{
+    transform: skew(-5deg);
+    opacity: 0;
+  }
+  100%{
+    transform: skew(20deg) translate(500px) ;
+    opacity: 0;
+  }
+}
+@keyframes slideme-3{
+  0%{
+    transform: skewX(30deg) translate(-500px);
+    opacity: 0;
+  }
+  60%{
+    transform: translateX(0px);
+  }
+  62%{
+    transform: skewX(0deg) translateX(30px);
+  }
+  70%{
+    transform: skew(-5deg);
+    opacity: 1;
+  }
+  80%{
+    transform: skew(0deg) translate(0);
+    opacity: 1;
+  }
+  90%{
+    transform: skew(-5deg);
+    opacity: 0;
+  }
+  100%{
+    transform: skew(0deg) translate(0);
+    opacity: 0;
+  }
+}
+
+@keyframes slideme-2{
+  0%{
+    transform: skewX(30deg) translate(-500px);
+    opacity: 0;
+  }
+  60%{
+    transform: translateX(0px);
+  }
+  62%{
+    transform: skewX(0deg) translateX(30px);
+  }
+  70%{
+    transform: skew(-5deg);
+    opacity: 1;
+  }
+  80%{
+    transform: skew(0deg) translate(0);
+    opacity: 1;
+  }
+  90%{
+    transform: skew(-5deg);
+    opacity: 0.8;
+  }
+  100%{
+    transform: skew(0deg) translate(0);
+    opacity: 0;
+  }
+}
+
+@keyframes slideme{
+  0%{
+    transform: skewX(30deg) translate(-500px);
+    opacity: 0;
+  }
+  60%{
+    transform: translateX(0px);
+  }
+  62%{
+    transform: skewX(0deg) translateX(30px);
+  }
+  70%{
+    transform: skew(-5deg);
+    opacity: 1;
+  }
+  80%{
+    transform: skew(0deg) translate(0);
+    opacity: 0;
+  }
+  90%{
+    transform: skew(-5deg);
+    opacity: 0;
+  }
+  100%{
+    transform: skew(20deg) translate(500px);
+    opacity: 0;
+  }
+}
+
+
+
+@media ( min-width:950px ) and ( max-width:1150px ) {
+  .content .image img{
+    width: 300px;
+    position: absolute; /* دول هيتشالو لو هعمل مشروع حقيقي */
+    bottom: 15%;
+    left: 70%;
+    border-radius: 60px;
+  }
+}
+
+@media (max-width:950px) {
+  .content , nav{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content .image .content .text{
+    width: 80%;
+  }
+  body::after{
+    clip-path: circle(50% at bottom );
+  }
+  .content .image img{
+    width: 300px;
+    position: absolute; /* دول هيتشالو لو هعمل مشروع حقيقي */
+    bottom: 15%;
+    left: 18%;
+    border-radius: 80px;
+  }
+  div .text {
+    color: #fff;
+    width: 100%;
+    height: 33%;
+    position: absolute;
+    bottom: 67%;
+    line-height: 55px;
+  }
+  div .text h2{
+    font-size: 38px;
+    /* text-transform: uppercase; */
+    /* font-weight: 700; */
+    /* letter-spacing: 20px; */  /* التنسيقات دي هتتحط لو هنعمل موقع حقيقي */
+  }
+  div .text p{
+    /* font-size: 18px; */
+    font-size: 25px;/* دي هتتشال ونحط ال فوق*/
+    line-height: 35px;
+    margin: 10px 0;
+    /* letter-spacing: 1px; */
+  }
+}
